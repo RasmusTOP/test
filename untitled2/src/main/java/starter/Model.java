@@ -46,6 +46,7 @@ public class Model{
         System.out.println(line);
         line = reader.readLine();
         System.out.println(line);
+        System.out.println(new Image(Thread.currentThread().getContextClassLoader().getResource( "Serier-billeder/Braveheart.jpg").toString()).getHeight());
         //URL fileUrl = ClassLoader.getSystemResource("/film.txt");
         //System.out.println(fileUrl.toString());
         //System.out.println(fileUrl + "" + new File(fileUrl.getFile()).canRead() + new File(fileUrl.getFile()).length());
