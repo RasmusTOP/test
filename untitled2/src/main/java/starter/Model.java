@@ -47,19 +47,9 @@ public class Model{
         System.out.println(line);
         line = reader.readLine();
         System.out.println(line);
-        line = reader.readLine();
-        URL url = null;
-        try {
-            url = getClass().getResource("/Serier-billeder/Braveheart.jpg");
-            Image image = new Image(String.valueOf(url));
-            System.out.println(image.getHeight());
-            // display the image
-        }
-        catch (Exception e) {
-            String msg = e.getMessage();
-        }
+
         //System.out.println(new Image(new FileInputStream("Serier-billeder/Braveheart.jpg")).getHeight());
-        System.out.println(new Image(Thread.currentThread().getContextClassLoader().getResource( "Serier-billeder/Braveheart.jpg").toString()).getHeight());
+        System.out.println(new Image(Thread.currentThread().getContextClassLoader().getResource( "Serier-billeder/Braveheart.jpg").toExternalForm()).getHeight());
         //URL fileUrl = ClassLoader.getSystemResource("/film.txt");
         //System.out.println(fileUrl.toString());
         //System.out.println(fileUrl + "" + new File(fileUrl.getFile()).canRead() + new File(fileUrl.getFile()).length());
@@ -92,7 +82,7 @@ public class Model{
                     if(file == mediaTypes.get(0)){
                         //InputStream pictureFileLocation = getClass().getClassLoader().getResourceAsStream( "Film - billeder/" + data[0] +".jpg");
                         //File pictureFileLocationFile = new File(String.valueOf(pictureFileLocation));
-                        totalContent.add(new Movie(data[0],data[3],data[1],data[2], new Image(Model.class.getResourceAsStream( "Film-billeder/" +data[0] +".jpg"))));
+                        totalContent.add(new Movie(data[0],data[3],data[1],data[2], new Image(Thread.currentThread().getContextClassLoader().getResourceAsStream( "Film-billeder/" +data[0] +".jpg"))));
                     }
                     if(file == mediaTypes.get(1)){
                         //URL pictureFileLocation = Thread.currentThread().getContextClassLoader().getResource( "Serier-billeder/" + data[0] +".jpg");
