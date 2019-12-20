@@ -52,12 +52,13 @@ public class Model{
         try {
             url = getClass().getResource("/Serier-billeder/Braveheart.jpg");
             Image image = new Image(String.valueOf(url));
+            System.out.println(image.getHeight());
             // display the image
         }
         catch (Exception e) {
             String msg = e.getMessage();
         }
-        System.out.println(new Image(new FileInputStream("Serier-billeder/Braveheart.jpg")).getHeight());
+        //System.out.println(new Image(new FileInputStream("Serier-billeder/Braveheart.jpg")).getHeight());
         System.out.println(new Image(Thread.currentThread().getContextClassLoader().getResource( "Serier-billeder/Braveheart.jpg").toString()).getHeight());
         //URL fileUrl = ClassLoader.getSystemResource("/film.txt");
         //System.out.println(fileUrl.toString());
