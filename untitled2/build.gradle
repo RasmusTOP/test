@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.beryx.jlink' version '2.12.0'
+}
+
+group 'test'
+version '1.0-SNAPSHOT'
+mainClassName = 'starter.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //compile 'org.kordamp.ikonli:ikonli-javafx:11.0.2'
+    compileOnly "org.openjfx:javafx-graphics:$javafx.version:win"
+    compileOnly "org.openjfx:javafx-graphics:$javafx.version:linux"
+    compileOnly "org.openjfx:javafx-graphics:$javafx.version:mac"
+}
+javafx {
+    version = "13"
+
+    modules = [ 'javafx.base','javafx.controls','javafx.fxml','javafx.graphics','javafx.media' ,'javafx.swing']
+}
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+        //configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+applicationDefaultJvmArgs = ["-Xms256m", "-Xmx6G"]
+jlink {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'Main'
+    }
+}
+//apply from: 'args.gradle'
+run {
+    args = ['data/.osm']
+}
