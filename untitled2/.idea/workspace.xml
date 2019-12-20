@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/starter/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/starter/Model.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/distributions/untitled2-1.0-SNAPSHOT.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/untitled2-1.0-SNAPSHOT.tar" afterDir="false" />
@@ -105,7 +104,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -137,7 +136,7 @@
   </component>
   <component name="RunManager" selected="Gradle.untitled2 [build]">
     <configuration name="main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="starter.Main" />
       <module name="untitled2.main" />
       <option name="VM_PARAMETERS" value="--module-path file://$USER_HOME$/Downloads/javafx-sdk-13.0.1/lib --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web" />
       <method v="2">
@@ -271,8 +270,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.untitled2-1.0-SNAPSHOT.jar" />
         <item itemvalue="Gradle.untitled2 [jar]" />
+        <item itemvalue="JAR Application.untitled2-1.0-SNAPSHOT.jar" />
         <item itemvalue="Gradle.untitled2 [dependencies]" />
         <item itemvalue="Gradle.untitled2 [properties]" />
       </list>
@@ -290,7 +289,7 @@
       <updated>1576749735393</updated>
       <workItem from="1576749743227" duration="13872000" />
       <workItem from="1576767128668" duration="28528000" />
-      <workItem from="1576836497672" duration="254000" />
+      <workItem from="1576836497672" duration="942000" />
     </task>
     <servers />
   </component>

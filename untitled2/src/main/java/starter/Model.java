@@ -3,10 +3,13 @@ package starter;
 import javafx.scene.image.Image;
 
 import javax.swing.*;
+import java.awt.*;
 import java.net.URL;
 import java.util.*;
 import java.io.*;
 import java.lang.*;
+import java.util.List;
+
 //java --module-path file:///Users/rasmuspedersen/Downloads/javafx-sdk-13.0.1/lib --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web -jar IdeaProjects/untitled2/build/libs/untitled2-1.0-SNAPSHOT.jar
 public class Model{
     private JPanel mjp = new JPanel();
@@ -45,7 +48,16 @@ public class Model{
         line = reader.readLine();
         System.out.println(line);
         line = reader.readLine();
-        System.out.println(line);
+        URL url = null;
+        try {
+            url = getClass().getResource("/Serier-billeder/Braveheart.jpg");
+            Image image = new Image(String.valueOf(url));
+            // display the image
+        }
+        catch (Exception e) {
+            String msg = e.getMessage();
+        }
+        System.out.println(new Image(new FileInputStream("Serier-billeder/Braveheart.jpg")).getHeight());
         System.out.println(new Image(Thread.currentThread().getContextClassLoader().getResource( "Serier-billeder/Braveheart.jpg").toString()).getHeight());
         //URL fileUrl = ClassLoader.getSystemResource("/film.txt");
         //System.out.println(fileUrl.toString());
